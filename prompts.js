@@ -1,5 +1,12 @@
 const path = require('path')
-const vueConfig = require(path.join(process.cwd(), 'vue.config.js')).pluginOptions.meta
+var vueConfig
+
+try {
+  vueConfig = require(path.join(process.cwd(), 'vue.config.js')).pluginOptions.meta
+}
+catch(err) {
+  vueConfig = {}
+}
 
 var prompts = [
   {
