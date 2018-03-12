@@ -5,6 +5,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta property="og:title" content="<%= options.projectName %>">
+  <meta property="og:description" content="<%= options.description %>">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%= options.url %>" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <% if (options.twitterHandle!='') { %><meta name="twitter:site" content="@<%= options.twitterHandle %>"><% } %>
+  <meta property="twitter:title" content="<%= options.projectName %>">
+  <meta property="twitter:description" content="<%= options.description %>">
+
   <link rel="shortcut icon" href="<%%= webpackConfig.output.publicPath %%>favicon.ico">
   <title><%= options.projectName %></title>
 </head>

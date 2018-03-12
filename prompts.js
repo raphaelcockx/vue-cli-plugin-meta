@@ -5,7 +5,27 @@ var prompts = [
   {
     type: 'input',
     name: 'projectName',
-    message: 'Please enter the name of your project:'
+    message: 'Name of your project:'
+  },
+  {
+    type: 'input',
+    name: 'url',
+    message: 'Homepage (url) of your project, including http(s):',
+    filter: (url) => {
+      var hasIndex = url.match(/index.html$/)
+      if (hasIndex !== null) url = url.substr(0, hasIndex.index)
+      return url
+    }
+  },
+  {
+    type: 'input',
+    name: 'description',
+    message: 'Description of your project:'
+  },
+  {
+    type: 'input',
+    name: 'twitterHandle',
+    message: 'Twitter handle associated with this project (leave blank if none): @'
   }
 ]
 
