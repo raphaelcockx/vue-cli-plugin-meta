@@ -3,8 +3,7 @@ var vueConfig
 
 try {
   vueConfig = require(path.join(process.cwd(), 'vue.config.js')).pluginOptions.meta
-}
-catch(err) {
+} catch (err) {
   vueConfig = {}
 }
 
