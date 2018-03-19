@@ -17,11 +17,7 @@ var prompts = [
     type: 'input',
     name: 'url',
     message: 'Homepage (url) of your project, including http(s):',
-    filter: (url) => {
-      var hasIndex = url.match(/index.html$/)
-      if (hasIndex !== null) url = url.substr(0, hasIndex.index)
-      return url
-    }
+    filter: removeIndex
   },
   {
     type: 'input',
@@ -32,8 +28,23 @@ var prompts = [
     type: 'input',
     name: 'twitterHandle',
     message: 'Twitter handle associated with this project (leave blank if none): @'
+  },
+  {
+    type: 'input',
+    name: 'socialImage',
+    message: function (answers) {
+      return `Url of the image to be shown when shared on social media: ${addTrailingSlash(answers.url)}`
+    }
   }
 ]
+
+function removeIndex (url) {
+  return url.match(/index.html$/) == null ? url : url.slice(0, -10)
+}
+
+function addTrailingSlash (url) {
+  return url.match(/\/$/) == null ? `${url}/` : url
+}
 
 for (var key in vueConfig) {
   var promptIndex = prompts.findIndex(question => question.name === key)

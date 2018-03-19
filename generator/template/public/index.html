@@ -10,11 +10,13 @@
   <meta property="og:description" content="<%= options.description %>">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<%= options.url %>" />
+  <meta property="og:image" content="<%= options.url %><% if(options.url.match(/\/$/) == null) {%>/<% } %><%= options.socialImage %>">
 
   <meta name="twitter:card" content="summary_large_image">
   <% if (options.twitterHandle!='') { %><meta name="twitter:site" content="@<%= options.twitterHandle %>"><% } %>
   <meta property="twitter:title" content="<%= options.projectName %>">
   <meta property="twitter:description" content="<%= options.description %>">
+  <meta property="twitter:image:src" content="<%= options.url %><% if(options.url.match(/\/$/) == null) {%>/<% } %><%= options.socialImage %>">
 
   <link rel="shortcut icon" href="<%%= webpackConfig.output.publicPath %%>favicon.ico">
   <title><%= options.projectName %></title>
