@@ -35,6 +35,11 @@ var prompts = [
     message: function (answers) {
       return `Url of the image to be shown when shared on social media: ${addTrailingSlash(answers.url)}`
     }
+  },
+  {
+    type: 'input',
+    name: 'googleAnalytics',
+    message: 'Google analytics Tracking ID (starts with UA-, leave blank if none):'
   }
 ]
 

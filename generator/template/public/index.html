@@ -6,6 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <%if (options.googleAnalytics!=='') { %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= options.googleAnalytics %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', '<%= options.googleAnalytics %>');
+    </script>
+  <% } %>
+
   <meta property="og:title" content="<%= options.projectName %>">
   <meta property="og:description" content="<%= options.description %>">
   <meta property="og:type" content="website" />
