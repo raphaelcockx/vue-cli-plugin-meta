@@ -1,6 +1,6 @@
 # vue-cli-plugin-meta
 
-** Give your new Vue app some meta love **
+**Give your new Vue app some meta love**
 
 A Vue-cli plugin to add social media tags and other metadata to your project. Because while vue-cli 3.x lets you get started with a new project real quick, it will leave you with a rather 'barebones' index.html file. This plugin fixes that. By answering just a few questions about your project, you will benefit from:
 
@@ -25,11 +25,8 @@ vue create my-new-app
 Switch to your (new) project and add the plugin:
 
 ```
-vue add meta
-```
-
-```
 cd my-new-app
+vue add meta
 ```
 
 ## What we need to know

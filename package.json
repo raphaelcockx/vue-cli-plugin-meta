@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-meta",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue-cli plugin to add social media tags and other metadata to your project",
   "main": "index.js",
   "repository": {
@@ -15,7 +15,8 @@
     "graph",
     "social",
     "media",
-    "meta"
+    "meta",
+    "analytics"
   ],
   "author": "Raphael Cockx",
   "license": "MIT",
